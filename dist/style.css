@@ -35,13 +35,17 @@ header{
 .li{
     display: flex;
     align-items: center;
-    padding: auto 2vh auto 2vh;
+    padding-left: 25px;
+    padding-right: 25px;
     height: 100%;
-    
+    min-width: 5vh;
+    background-size: 150px 150px;
    
 }
 .li:hover{
     background-color: #0C0E13;
+    
+   
 }
 section{
     
@@ -50,11 +54,38 @@ section{
     background-color: #D6D5D1;
     color:#0C0E13;
 }
+#titleInSection{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 25px;
+    
+}
+#sectionGrid{
+    display:grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    justify-content: center;
+   
+}
+#introduction{
+    font-size: 20px;
+    border-radius: 5%;
+    border:10px solid #0C0E13; 
+    justify-self: center;
+    padding-top: 10px;
+}
+#location{
+    max-width: 450px;
+    min-height: 450px;
+    justify-self: center;
+    border-radius: 5%;
+    border:10px solid #0C0E13; 
+
+}
 footer{
     
     padding-left:1vh;
     background-color: #0C0E13;
-    
+    margin-top: auto;
     min-height: 5vh;
     display: flex;
     align-items: center;
