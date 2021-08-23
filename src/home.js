@@ -1,9 +1,10 @@
+
 function homePage(){
     let body=document.querySelector("body");
     //Header
     let header=document.createElement("header");
     let titleDiv=document.createElement("div");
-    titleDiv.id="tile";
+    titleDiv.id="title";
     titleDiv.textContent="Goulash Restaurant";
     header.appendChild(titleDiv);
 
@@ -19,16 +20,26 @@ function homePage(){
     NavDiv2.textContent="Menu";
     NavDiv3.textContent="Contact";
 
-    for (let i = 1; index <= 3; index++) {
-        `NavDiv${i}`.classList.add("li");
-        Nav.appendChild(`NavDiv${i}`);
-    }
+    NavDiv1.className="li";
+    NavDiv1.id="navDiv1";
+    NavDiv2.className="li";
+    NavDiv2.id="navDiv2";
+    NavDiv3.className="li";
+    NavDiv3.id="navDiv3";
+
+    Nav.appendChild(NavDiv1);
+    Nav.appendChild(NavDiv2);
+    Nav.appendChild(NavDiv3);
+    
     //Section
     let section=document.createElement("section");
+    
+
     let titleInSectionDiv=document.createElement("div");
     let b=document.createElement("b");
     b.textContent="Family owned since 1998";
     titleInSectionDiv.appendChild(b);
+    titleInSectionDiv.id="titleInSection";
     section.appendChild(titleInSectionDiv);
 
     let sectionGridDiv=document.createElement("div");
@@ -41,28 +52,36 @@ function homePage(){
     sectionGridDiv.appendChild(img);
 
     let introductionDiv=document.createElement("div");
+    introductionDiv.id="introduction";
+    introductionDiv.textContent="Our restaurant located in Tiszafüred serves delicious Hungarian food.";
 
 
+    let p4=document.createElement("p");
+    p4.textContent="Come enjoy your meal with us.";
+    
+    
+
+    let p2=document.createElement("p");
+    let b2=document.createElement("b");
+    b2.textContent="Location:";
+    p2.appendChild(b2);
+    p2.innerHTML+="5358 Tiszafüred";
 
 
-
-
+    let p3=document.createElement("p");
+    let b3=document.createElement("b");
+    b3.textContent="Open:";
+    p3.appendChild(b3);
+    
+    p3.innerHTML+="M-F:8-19 S-S:8-22";
+    
+    
+    introductionDiv.appendChild(p2);
+    introductionDiv.appendChild(p3);
+    introductionDiv.appendChild(p4);
+    sectionGridDiv.appendChild(introductionDiv);
     section.appendChild(sectionGridDiv);
-    /*<section>
 
-    <div id="sectionGrid">
-        
-        <div id="introduction">
-            Our restaurant located in Tiszafüred serves delicious Hungarian food.
-            <p>Come enjoy your meal with us.</p>
-            <p><b>Location:</b> 5358 Tiszafüred</p>
-            <p><b>Open:</b> M-F:8-19 S-S:8-22</p>
-            <p>Come enjoy your meal with us.</p>
-        </div>
-    </div>
-</section>
-*/
-//footer
 let footer=document.createElement("footer");
 footer.textContent="Hungarian Restaurant";
 
@@ -73,4 +92,5 @@ body.appendChild(footer);
 
 
 }
-export {homePage};
+
+export  {homePage};
