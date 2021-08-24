@@ -92,5 +92,70 @@ body.appendChild(footer);
 
 
 }
+function mainHomePage(){
+    let section=document.querySelector("section");
+   
+    
+    while (section.firstChild) {
+    section.removeChild(section.lastChild)
+    }
+    let footer2=document.querySelector("footer");
+    while (footer2.firstChild) {
+        footer2.removeChild(footer2.lastChild)
+    }
+    
 
-export  {homePage};
+    let titleInSectionDiv=document.createElement("div");
+    let b=document.createElement("b");
+    b.textContent="Family owned since 1998";
+    titleInSectionDiv.appendChild(b);
+    titleInSectionDiv.id="titleInSection";
+    section.appendChild(titleInSectionDiv);
+
+    let sectionGridDiv=document.createElement("div");
+    sectionGridDiv.id="sectionGrid";
+    
+
+    let img=document.createElement("img");
+    img.setAttribute("src","/home/dev/Pictures/Screenshot_20210823_142211.png");
+    img.id="location";
+    sectionGridDiv.appendChild(img);
+
+    let introductionDiv=document.createElement("div");
+    introductionDiv.id="introduction";
+    introductionDiv.textContent="Our restaurant located in Tiszafüred serves delicious Hungarian food.";
+
+
+    let p4=document.createElement("p");
+    p4.textContent="Come enjoy your meal with us.";
+    
+    
+
+    let p2=document.createElement("p");
+    let b2=document.createElement("b");
+    b2.textContent="Location:";
+    p2.appendChild(b2);
+    p2.innerHTML+="5358 Tiszafüred";
+
+
+    let p3=document.createElement("p");
+    let b3=document.createElement("b");
+    b3.textContent="Open:";
+    p3.appendChild(b3);
+    
+    p3.innerHTML+="M-F:8-19 S-S:8-22";
+    
+    
+    introductionDiv.appendChild(p2);
+    introductionDiv.appendChild(p3);
+    introductionDiv.appendChild(p4);
+    sectionGridDiv.appendChild(introductionDiv);
+    section.appendChild(sectionGridDiv);
+
+    
+
+    footer2.textContent="Hungarian Restaurant";
+    
+}
+
+export  {homePage,mainHomePage};

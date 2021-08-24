@@ -90,3 +90,28 @@ footer{
     display: flex;
     align-items: center;
 }
+/*menu section*/
+#mainMenu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#mainMenu img{
+    /*max-width: 450px;
+    max-height: 450px;
+    min-width: 450px;
+    min-height: 450px;*/
+    width: 450px;
+    height: 450px;
+}
+.food{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5%;
+    border:10px solid #0C0E13; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 5px;
+    min-width: 500px;
+}
